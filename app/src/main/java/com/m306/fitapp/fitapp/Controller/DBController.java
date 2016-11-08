@@ -4,7 +4,6 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-
 import com.m306.fitapp.fitapp.Controller.FitnessplanContract.*;
 import com.m306.fitapp.fitapp.Model.Fitnessplan;
 import com.m306.fitapp.fitapp.Model.Exercise;
@@ -12,7 +11,7 @@ import com.m306.fitapp.fitapp.Model.Exercise;
 import java.util.ArrayList;
 import java.util.Map;
 
-public class DB {
+public class DBController {
 
     public static SQLiteDatabase DB;
 
