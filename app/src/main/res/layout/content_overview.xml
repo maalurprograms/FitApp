@@ -13,8 +13,10 @@
     tools:context="com.m306.fitapp.fitapp.Controller.OverviewActivity"
     tools:showIn="@layout/activity_overview">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/plan_list">
+
+    </android.support.v7.widget.RecyclerView>
 </RelativeLayout>

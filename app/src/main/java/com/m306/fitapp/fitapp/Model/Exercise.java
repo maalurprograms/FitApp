@@ -7,11 +7,11 @@ package com.m306.fitapp.fitapp.Model;
 public class Exercise {
     public long ID;
     public String Name;
-    public int Wiederholungen;
+    public int Repetition;
 
-    public Exercise(long ID, String name, int wiederholungen) {
+    public Exercise(long ID, String name, int repetition) {
         this.ID = ID;
         Name = name;
-        Wiederholungen = wiederholungen;
+        Repetition = repetition;
     }
 }
