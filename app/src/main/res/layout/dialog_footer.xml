@@ -8,7 +8,7 @@
     <Button
         android:id="@+id/save"
         android:textSize="15dp"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorPrimaryDark"
         android:background="@android:color/transparent"
         android:layout_alignParentEnd="true"
         android:textAlignment="center"
@@ -19,7 +19,7 @@
     <Button
         android:id="@+id/cancel"
         android:textSize="15dp"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorPrimaryDark"
         android:background="@android:color/transparent"
         android:layout_alignParentStart="true"
         android:textAlignment="center"
