@@ -88,41 +88,6 @@ public class DBController {
         return exercises;
     }
 
-//    public static ArrayList<ExerciseEntry> getGradesFromFitnessplanModel(long id){
-//        ArrayList<ExerciseEntry> grades = new ArrayList<>();
-//        String[] gradeProjection = {
-//                ExerciseEntry._ID,
-//                ExerciseEntry.COLUMN_NAME_NAME,
-//                ExerciseEntry.COLUMN_NAME_GRADE,
-//                ExerciseEntry.COLUMN_NAME_WEIGHT
-//        };
-//
-//        String selection = ExerciseEntry.COLUMN_NAME_SUBJECT + " LIKE ?";
-//        String[] selectionArgs = { String.valueOf(id) };
-//        Cursor cursorGrade = DB.query(
-//                ExerciseEntry.TABLE_NAME,
-//                gradeProjection,
-//                selection,
-//                selectionArgs,
-//                null,
-//                null,
-//                null
-//        );
-//        cursorGrade.moveToFirst();
-//        while(!cursorGrade.isAfterLast()){
-//            grades.add(
-//                    new ExerciseEntry(
-//                            cursorGrade.getLong(cursorGrade.getColumnIndexOrThrow(ExerciseEntry._ID)),
-//                            cursorGrade.getString(cursorGrade.getColumnIndexOrThrow(ExerciseEntry.COLUMN_NAME_NAME)),
-//                            cursorGrade.getDouble(cursorGrade.getColumnIndexOrThrow(ExerciseEntry.COLUMN_NAME_GRADE)),
-//                            cursorGrade.getInt(cursorGrade.getColumnIndexOrThrow(ExerciseEntry.COLUMN_NAME_WEIGHT))
-//                    )
-//            );
-//            cursorGrade.moveToNext();
-//        }
-//        return grades;
-//    }
-
     public static long insert(String tableName, Map<String,String> valueMap){
         ContentValues values = new ContentValues();
         for (Map.Entry<String ,String> entry:valueMap.entrySet()) {
