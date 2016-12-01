@@ -45,26 +45,6 @@ public abstract class Dialog extends android.app.Dialog{
             }
         });
 
-//        Button Save = (Button) findViewById(R.id.savePlan);
-//        Save.setText("OK");
-//        Button Cancel = (Button) findViewById(R.id.cancel);
-//        Cancel.setText("CANCEL");
-//
-//        Cancel.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                dismiss();
-//            }
-//        });
-//        Save.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                savePlan();
-//                Toast.makeText(context, "Fitnessplan wurde erstellt.", Toast.LENGTH_SHORT).show();
-//                dismiss();
-//            }
-//        });
-
     }
 
     /**
@@ -117,26 +97,6 @@ public abstract class Dialog extends android.app.Dialog{
 
             }
         });
-
-//        Button Save = (Button) findViewById(R.id.savePlan);
-//        Save.setText("OK");
-//        Button Cancel = (Button) findViewById(R.id.cancel);
-//        Cancel.setText("CANCEL");
-//
-//        Cancel.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                dismiss();
-//            }
-//        });
-//        Save.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                savePlan();
-//                Toast.makeText(context, "Übung wurde erstellt.", Toast.LENGTH_SHORT).show();
-//                dismiss();
-//            }
-//        });
 
     }
 
