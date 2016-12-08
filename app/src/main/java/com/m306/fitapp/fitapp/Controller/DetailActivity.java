@@ -56,7 +56,7 @@ public class DetailActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new Dialog("Übung erstellen", "Geben Sie einen Namen ein:", "Geben Sie die Anzahl Wiederholungen ein.", "Beispiel", "0", Context) {
+                new Dialog("Übung erstellen", "Geben Sie einen Namen ein:", "Geben Sie die Anzahl Wiederholungen ein.", "Beispiel", "0", Context, "Übung wurde erstellt.") {
                     @Override
                     public void save() {
                         long ID = DBController.insert(FitnessplanContract.ExerciseEntry.TABLE_NAME, new HashMap<String, String>(){{
@@ -91,7 +91,7 @@ public class DetailActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            new Dialog("Fitnessplan bearbeiten", CurrentPlanName, Context) {
+            new Dialog("Fitnessplan bearbeiten", CurrentPlanName, Context, "Änderungen gespeichert.") {
                 @Override
                 public void save() {
                     DBController.update(CurrentPlanID, Name, FitnessplanContract.FitnessplanEntry.TABLE_NAME, FitnessplanContract.FitnessplanEntry.COLUMN_NAME_NAME, FitnessplanContract.FitnessplanEntry._ID);

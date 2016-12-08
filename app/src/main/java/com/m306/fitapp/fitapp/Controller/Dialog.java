@@ -7,18 +7,20 @@ import android.widget.*;
 
 import com.m306.fitapp.fitapp.R;
 
-public abstract class Dialog extends android.app.Dialog{
+public abstract class Dialog extends android.app.Dialog {
 
     public String Name;
     public int Repetitions;
 
     /**
      * Constructor to make a Fitnessplan Dialog
-     * @param info
+     *
+     * @param header
      * @param defaultValue
      * @param context
+     * @param approval
      */
-    public Dialog(String header, String defaultValue, final Context context) {
+    public Dialog(String header, String defaultValue, final Context context, final String approval) {
         super(context);
 
         setContentView(R.layout.fintessplan_dialog);
@@ -40,7 +42,7 @@ public abstract class Dialog extends android.app.Dialog{
             public void onClick(View view) {
                 Name = planNameInput.getText().toString();
                 save();
-                Toast.makeText(context, "Fitnessplan wurde erstellt.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, approval, Toast.LENGTH_SHORT).show();
                 dismiss();
             }
         });
@@ -49,13 +51,14 @@ public abstract class Dialog extends android.app.Dialog{
 
     /**
      * Constructor to make a Exercise Dialog
+     *
      * @param nameInfo
      * @param repetitionsInfo
      * @param nameDefaultValue
      * @param repetitionDefaultValue
      * @param context
      */
-    public Dialog(String header, String nameInfo, String repetitionsInfo, String nameDefaultValue, String repetitionDefaultValue, final Context context) {
+    public Dialog(String header, String nameInfo, String repetitionsInfo, String nameDefaultValue, String repetitionDefaultValue, final Context context, final String approval) {
         super(context);
 
         setContentView(R.layout.exercise_dialog);
@@ -89,9 +92,9 @@ public abstract class Dialog extends android.app.Dialog{
                     Name = exerciseNameInput.getText().toString();
                     Repetitions = Integer.valueOf(exerciseRepetitionInput.getText().toString());
                     save();
-                    Toast.makeText(context, "Übung wurde erstellt.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, approval, Toast.LENGTH_SHORT).show();
                     dismiss();
-                } catch (Exception e){
+                } catch (Exception e) {
                     Toast.makeText(context, "Bitte geben Sie bei Wiederholungen nur Zahlen ein.", Toast.LENGTH_LONG).show();
                 }
 
@@ -100,7 +103,7 @@ public abstract class Dialog extends android.app.Dialog{
 
     }
 
-    private Button setUpButtons(){
+    private Button setUpButtons() {
         Button Save = (Button) findViewById(R.id.save);
         Save.setText("OK");
         Button Cancel = (Button) findViewById(R.id.cancel);

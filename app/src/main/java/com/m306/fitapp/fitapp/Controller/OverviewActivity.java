@@ -50,7 +50,7 @@ public class OverviewActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new Dialog("Neuer Fitnessplan.","Name des Fitnessplans",Context) {
+                new Dialog("Neuer Fitnessplan.","Name des Fitnessplans",Context, "Fitnessplan wurde gespeichert.") {
                     @Override
                     public void save() {
                         long ID = DBController.insert(FitnessplanContract.FitnessplanEntry.TABLE_NAME, new HashMap<String, String>(){{

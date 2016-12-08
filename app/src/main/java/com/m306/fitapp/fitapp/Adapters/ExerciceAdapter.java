@@ -49,7 +49,7 @@ public class ExerciceAdapter extends RecyclerView.Adapter<ExerciceAdapter.ViewHo
             @Override
             public void onClick(View view) {
 
-                new Dialog("Übung bearbeiten", "Geben Sie einen neuen Namen ein:", "Geben Sie die Anzahl Wiederholungen ein:", exercise.Name, String.valueOf(exercise.Repetition), Context) {
+                new Dialog("Übung bearbeiten", "Geben Sie einen neuen Namen ein:", "Geben Sie die Anzahl Wiederholungen ein:", exercise.Name, String.valueOf(exercise.Repetition), Context, "Änderungen gespeichert.") {
                     @Override
                     public void save() {
                         if (!Name.equals(exercise.Name)){
